@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Portfolio — Gitana </title>
+	<style>
+		:root{--accent:#01c8ff;--muted:rgba(255,255,255,0.75);--card:rgba(255,255,255,0.03)}
+		*{box-sizing:border-box}
+		body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071018,#081026);color:#fff;padding:24px;display:flex;justify-content:center}
+		.wrap{width:100%;max-width:1100px}
+		header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+		.brand{display:flex;gap:12px;align-items:center}
+		.logo{width:64px;height:64px;border-radius:8px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}
+		h1{margin:0;color:var(--accent);font-size:32px}
+		nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+		.hero{margin-top:16px;border-radius:12px;overflow:hidden;height:280px;background:url('https://images.unsplash.com/photo-1513791544551-18e3f612d4d1?w=1600&auto=format&fit=crop') center/cover no-repeat;position:relative}
+		.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,0.6))}
+		.hero .txt{position:absolute;left:20px;bottom:20px}
+		main{margin-top:18px}
+		.intro{background:var(--card);padding:14px;border-radius:10px}
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+		figure{margin:0;background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02));padding:8px;border-radius:8px}
+			figure img{width:100%;height:160px;object-fit:cover;border-radius:6px;display:block}
+			figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+
+			/* Specifieke rij: plaats figuren 4-6 in één aparte rij en toon deze afbeeldingen verticaal
+			   Gebruik dezelfde kolom-setup als .grid zodat de verticale rij exact uitlijnt met de eerste rij */
+			.vertical-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+			.vertical-row figure{margin:0;padding:8px;border-radius:8px;background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02))}
+			.vertical-row img{width:100%;height:420px;object-fit:cover;border-radius:6px;display:block}
+			.vertical-row .pdf-embed{width:100%;height:420px;border-radius:6px;display:block}
+			.vertical-row figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+			@media(max-width:900px){.vertical-row img{height:320px}.vertical-row .pdf-embed{height:320px}}
+			.video-wrap{margin-top:12px;background:var(--card);padding:12px;border-radius:8px}
+			video{width:100%;height:auto;border-radius:6px;display:block}
+		footer{margin-top:18px;color:rgba(255,255,255,0.6);text-align:center;font-size:13px}
+		@media(min-width:900px){.hero{height:360px}figure img{height:200px}}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="brand">
+				<img class="logo" src="https://images.unsplash.com/photo-1513791544551-18e3f612d4d1?w=200&auto=format&fit=crop" alt="Portfoliologo">
+				<div>
+					<h1>Gitana </h1>
+					<div style="font-size:13px;color:rgba(255,255,255,0.75)">Grafisch ontwerp</div>
+				</div>
+			</div>
+
+
+			<nav aria-label="Hoofd navigatie">
+				<a href="#projecten">Projecten</a>
+				<a href="#video">Video</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+
+		<section class="hero" role="img" aria-label="Sfeerbeeld Winterland Hasselt">
+			<div class="txt">
+				<h2 style="margin:0">Portfolio — </h2>
+				<p style="margin:6px 0 0;color:rgba(255,255,255,0.9)">Student grafisch ontwerp Portfolio</p>
+			</div>
+		</section>
+
+		<main>
+			<section id="projecten" class="intro">
+				<h3 style="margin-top:0">Projecten </h3>
+				<p style="margin:6px 0 0;color:var(--muted)">Gemaakte projecten doorheen de jaren.</p>
+
+				<div class="grid">
+					<figure>
+						<img src="typografie1.png" alt="Kermisattractie bij avond">
+						<figcaption>Lettertype ontwerp "PANORA" - PXL-MAD 2025</figcaption>
+					</figure>
+
+					<figure>
+						<img src="Typografie3.png" alt="Glühwein kraampje">
+						<figcaption>Lettertype ontwerp "Nectar" - PXL-MAD 2025</figcaption>
+					</figure>
+
+					<figure>
+						<img src="typografie2.png" alt="Reuzenrad uitzicht">
+						<figcaption>Lettertype ontwerp "FourFold" - PXL-MAD 2025</figcaption>
+					</figure>
+				</div>
+
+				<!-- Aparte rij: figuren 4-6 verticaal geplaatst -->
+				<div class="vertical-row" aria-label="Aparte verticale rij voor foto 4 t/m 6">
+					<figure>
+						<img src="adept.jpg" alt="Kermisattractie bij avond">
+						<figcaption>Bauhaus geinspireerde affiche - PXL-MAD 2023</figcaption>
+					</figure>
+
+					<figure>
+						<img src="tangram.png" alt="Glühwein kraampje">
+						<figcaption>Cijfer reeks ontwerp via een tangram - PXL-MAD 2023 </figcaption>
+					</figure>
+
+					<figure>
+						<img src="RealArt1.png" alt="Realistic Art 1">
+						<figcaption>Realistische illustratie - PXL-MAD 2023 </figcaption>
+					</figure>
+				</div>
+
+				<!-- Nieuwe rij: BEELD 7-9 (verplaatst naar volgende rij) -->
+				<div class="vertical-row" aria-label="Rij voor beeld 7 t/m 9">
+					<figure>
+						<img src="Shakespeare1.png" alt="Kermisattractie bij avond">
+						<figcaption>35 Variations from Shakespeare - PXL-MAD 2024</figcaption>
+					</figure>
+
+					<figure>
+						<img src="Fourfold-poster.png" alt="Glühwein kraampje">
+						<figcaption>Poster ontwerp vanuit een grid - PXL-MAD 2025</figcaption>
+					</figure>
+
+					<figure>
+						<img src="Nectar-Poster.png" alt="Realistic Art 1">
+						<figcaption>Poster ontwerp vanuit een grid - PXL-MAD 2025</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<section id="video">
+				<h3 style="margin-top:18px">Video</h3>
+				<p style="color:var(--muted)">Een kerstvideo in Glyphs, waarin bewegende symbolen langzaam veranderen in woorden en de feestelijke boodschap tot leven brengt.</p>
+
+				<div class="video-wrap">
+					<!-- Lokale QuickTime-video in dezelfde map als dit HTML-bestand -->
+					<video id="glyphsVideo" controls playsinline autoplay muted preload="auto">
+						<!-- Eerst .mov (QuickTime). Niet alle browsers spelen .mov; als het niet werkt, converteer naar MP4 met ffmpeg -->
+						<source src="Kerstvideo-Glyphs.mov" type="video/quicktime">
+						<!-- Optionele MP4 fallback (als je later converteert): Kerstvideo-Glyphs.mp4 -->
+						<source src="Kerstvideo-Glyphs.mp4" type="video/mp4">
+						Je browser ondersteunt geen HTML5 video. <a href="Kerstvideo-Glyphs.mov" style="color:var(--accent)">Download of bekijk de video</a>.
+					</video>
+					<script>
+					// Speel de video vooruit, bij einde speel achteruit door currentTime te verlagen,
+					// en bij begin start opnieuw vooruit. Werkt zonder negatieve playbackRate.
+					document.addEventListener('DOMContentLoaded', function(){
+						const v = document.getElementById('glyphsVideo');
+						if(!v) return;
+					// Video is now user-started: geen autoplay/mute meer, gebruiker drukt zelf op play
+
+						const step = 0.04; // stap in seconden (40ms)
+						let reversing = false;
+						let revInterval = null;
+
+						function startReverse(){
+							if(reversing) return;
+							reversing = true;
+							v.pause();
+							revInterval = setInterval(()=>{
+								if(v.currentTime <= step + 0.001){
+									clearInterval(revInterval);
+									reversing = false;
+									v.currentTime = 0;
+									setTimeout(()=>{ v.play().catch(()=>{}); }, 120);
+								} else {
+									v.currentTime = Math.max(0, v.currentTime - step);
+								}
+							}, step * 1000);
+						}
+
+						v.addEventListener('ended', ()=>{
+							startReverse();
+						});
+					});
+					</script>
+
+					</div>
+                    <!-- 🎬 Twee video’s naast elkaar -->
+<div class="video-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+    <video style="width:100%;" controls playsinline preload="auto">
+        <source src="Video-Vengaboys.mp4" type="video/mp4">
+    </video>
+
+    <video style="width:100%;" controls playsinline preload="auto">
+        <source src="Video-RAT.mp4" type="video/mp4">
+    </video>
+
+
+</div>
+                    
+			</section>
+
+            <section id="Selected" class="intro">
+				<h3 style="margin-top:0">Selected </h3>
+				<p style="margin:6px 0 0;color:var(--muted)">Basisschool project - Jan Latinne </p>
+
+				<div class="grid">
+					<figure>
+						<img src="JanlatinneART.png" alt="Kermisattractie bij avond">
+						<figcaption>Koffietas ontwerp - Geselecteerd door kunstenaar Jan Latinne 2015</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<section id="contact" class="intro" style="margin-top:12px">
+				<h3 style="margin-top:0">Contact</h3>
+				<p style="color:var(--muted)">Naam: Gitana Vdh — E-mail: jouw.email@example.com</p>
+			</section>
+		</main>
+
+		<footer>
+			&copy; 2026 — Portfolio — Gitana Vdh.
+		</footer>
+	</div>
+</body>
+</html>
